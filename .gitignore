@@ -1,0 +1,13 @@
+# Kuku's input pack is confidential: never commit it or anything that reproduces it
+data/
+resources/
+analysis/parsed.json
+analysis/transcript.txt
+*.zip
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Raw outputs on the real show quote Kuku's scripts: share them via a Drive link, not a public repo
+outputs/*
+!outputs/mini_show_demo/

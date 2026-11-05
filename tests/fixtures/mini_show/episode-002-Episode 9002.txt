@@ -1,0 +1,66 @@
+EPISODE NUMBER: Episode 2
+EPISODE LOGLINE: Thrown out with nothing, Mara is approached by a quiet stranger who knows the forgery was a crime.
+CONTINUITY NOTES: Synthetic test show.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. BAKERY - DAY
+Scene start: 00:00.00
+Scene end: 00:48.12
+
+Actions and dialogue:
+
+**ACTION:**
+Start: (00:00.00) | End: (00:03.00)
+Mara sits on her suitcase in the rain outside the bakery.
+
+**STRANGER (Low, Calm):**
+Start: (00:03.30) | End: (00:07.86)
+"They forged it. I watched them do it."
+
+**MARA (Startled):**
+Start: (00:08.16) | End: (00:10.62)
+"Who are you?"
+
+**STRANGER (Quiet):**
+Start: (00:10.92) | End: (00:15.06)
+"Someone who owes your mother a debt."
+
+**MARA (Suspicious):**
+Start: (00:15.36) | End: (00:18.24)
+"My mother is dead."
+
+**STRANGER (Grave):**
+Start: (00:18.54) | End: (00:22.26)
+"I know. That's why I'm here."
+
+**ACTION:**
+Start: (00:22.56) | End: (00:25.56)
+He hands her an old photograph of her mother standing beside him.
+
+**MARA (Gasping):**
+Start: (00:25.86) | End: (00:29.58)
+"This is you... with my mother?"
+
+**STRANGER (Solemn):**
+Start: (00:29.88) | End: (00:34.02)
+"Ask me what really happened to her."
+
+**SOUND FX:**
+Start: (00:34.32) | End: (00:37.32)
+Thunder cracks overhead.
+
+**MARA (Horrified):**
+Start: (00:37.62) | End: (00:40.50)
+"What are you saying?"
+
+**STRANGER (Deadly Serious):**
+Start: (00:40.80) | End: (00:44.52)
+"Her accident was not an accident."
+
+**SOUND FX:**
+Start: (00:44.82) | End: (00:47.82)
+Low cliffhanger drone holds, cut to black.
+
+--- SCRIPT END ---

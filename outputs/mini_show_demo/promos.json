@@ -1,0 +1,172 @@
+{
+  "input": "tests/fixtures/mini_show",
+  "stats": {
+    "episodes": 3,
+    "candidates": 48,
+    "provider": "heuristic",
+    "llm_calls": 0,
+    "llm_cache_hits": 0,
+    "tokens_in": 0,
+    "tokens_out": 0,
+    "llm_tagged_episodes": 0,
+    "seconds": 0.0
+  },
+  "promos": [
+    {
+      "rank": 1,
+      "id": "P01",
+      "score": 0.9016,
+      "quality": 0.8216,
+      "kind": "single",
+      "duration_s": 25.02,
+      "segments": [
+        {
+          "episode": 1,
+          "start": "00:38.88",
+          "end": "01:03.90",
+          "start_s": 38.88,
+          "end_s": 63.9
+        }
+      ],
+      "hook": "Mara: \"You let him steal my mother's bakery?\"",
+      "cliffhanger": "Mara: \"Then you'd better hope I never find out how you did it.\" (+ music sting)",
+      "why": "Loaded question in the first 1s (\"You let him steal my mother's bakery?\"); ends on episode-ending sting; stays on the leads, so no backstory is needed.",
+      "funnel": "acquisition (early/free episodes, no big spoilers)",
+      "flags": [],
+      "components": {
+        "hook": 0.805,
+        "cliff": 0.8,
+        "body": 0.299,
+        "standalone": 1.0
+      },
+      "alternate_cuts": []
+    },
+    {
+      "rank": 2,
+      "id": "P02",
+      "score": 0.8588,
+      "quality": 0.7788,
+      "kind": "single",
+      "duration_s": 27.54,
+      "segments": [
+        {
+          "episode": 1,
+          "start": "00:15.48",
+          "end": "00:43.02",
+          "start_s": 15.48,
+          "end_s": 43.02
+        }
+      ],
+      "hook": "Victor: \"You signed the bakery over to me last week.\"",
+      "cliffhanger": "Mara: \"You let him steal my mother's bakery?\"",
+      "why": "Shocking line in the first 1s (\"You signed the bakery over to me...\"); ends on unanswered question; stays on the leads, so no backstory is needed.",
+      "funnel": "acquisition (early/free episodes, no big spoilers)",
+      "flags": [],
+      "components": {
+        "hook": 0.4,
+        "cliff": 1.027,
+        "body": 0.447,
+        "standalone": 1.0
+      },
+      "alternate_cuts": []
+    },
+    {
+      "rank": 3,
+      "id": "P03",
+      "score": 0.7985,
+      "quality": 0.7985,
+      "kind": "single",
+      "duration_s": 24.72,
+      "segments": [
+        {
+          "episode": 3,
+          "start": "00:11.22",
+          "end": "00:35.94",
+          "start_s": 11.22,
+          "end_s": 35.94
+        }
+      ],
+      "hook": "[action] Victor grabs Mara's wrist and slams the photograph onto the table.",
+      "cliffhanger": "Mara: \"What will?\"",
+      "why": "Physical moment in the first 1s ([Victor grabs Mara's wrist and slams the...]); ends on unanswered question; stays on the leads, so no backstory is needed.",
+      "funnel": "retargeting (late-arc payoff, spoils twists)",
+      "flags": [],
+      "components": {
+        "hook": 0.75,
+        "cliff": 0.928,
+        "body": 0.386,
+        "standalone": 1.0
+      },
+      "alternate_cuts": []
+    },
+    {
+      "rank": 4,
+      "id": "P04",
+      "score": 0.7854,
+      "quality": 0.7454,
+      "kind": "single",
+      "duration_s": 25.14,
+      "segments": [
+        {
+          "episode": 2,
+          "start": "00:15.36",
+          "end": "00:40.50",
+          "start_s": 15.36,
+          "end_s": 40.5
+        }
+      ],
+      "hook": "Mara: \"My mother is dead.\"",
+      "cliffhanger": "Mara: \"What are you saying?\"",
+      "why": "Reveal / accusation in the first 1s (\"My mother is dead.\"); ends on unanswered question.",
+      "funnel": "mid-funnel",
+      "flags": [],
+      "components": {
+        "hook": 0.52,
+        "cliff": 0.948,
+        "body": 0.219,
+        "standalone": 1.0
+      },
+      "alternate_cuts": []
+    }
+  ],
+  "cross_episode_variants": [
+    {
+      "rank": 1,
+      "id": "V01",
+      "score": 0.6207,
+      "quality": 0.6207,
+      "kind": "cross-episode",
+      "duration_s": 22.92,
+      "segments": [
+        {
+          "episode": 1,
+          "start": "00:27.12",
+          "end": "00:38.58",
+          "start_s": 27.12,
+          "end_s": 38.58
+        },
+        {
+          "episode": 3,
+          "start": "00:11.22",
+          "end": "00:22.68",
+          "start_s": 11.22,
+          "end_s": 22.68
+        }
+      ],
+      "hook": "Mara: \"Daniel, tell him this is a lie.\"",
+      "cliffhanger": "Mara: \"Is that a threat?\"",
+      "why": "Shocking line in the first 1s (\"Daniel, tell him this is a lie.\"); ends on unanswered question, cut just before \"It's a promise.\"; stays on the leads, so no backstory is needed.",
+      "funnel": "acquisition (early/free episodes, no big spoilers)",
+      "flags": [
+        "2-segment edit: check visual continuity at the join"
+      ],
+      "components": {
+        "hook": 0.715,
+        "cliff": 0.736,
+        "body": 0.427,
+        "standalone": 1.0
+      },
+      "alternate_cuts": []
+    }
+  ]
+}

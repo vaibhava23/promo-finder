@@ -1,0 +1,26 @@
+# Swap the model here. Everything else stays the same.
+# provider: heuristic          -> offline, rule-based scores only (no key needed)
+# provider: openai_compatible  -> any OpenAI-compatible API; pick a preset or set base_url
+# provider: anthropic          -> Claude Messages API
+provider: heuristic
+
+# --- examples (uncomment one block) ---
+# provider: openai_compatible
+# preset: gemini            # gemini | groq | openrouter | ollama | openai
+# model: gemini-2.0-flash
+# api_key_env: GEMINI_API_KEY
+# min_interval_s: 4         # free-tier politeness (~15 requests/min)
+
+# provider: openai_compatible
+# preset: ollama            # fully local, free
+# model: qwen2.5:7b-instruct
+
+# provider: anthropic
+# model: claude-sonnet-5-5
+# api_key_env: ANTHROPIC_API_KEY
+
+temperature: 0.2
+max_tokens: 4096
+cache_dir: .cache/llm
+top_k: 30
+funnel_weight: 0.08   # posting-order bonus for early (free, spoiler-free) episodes; 0 = pure quality

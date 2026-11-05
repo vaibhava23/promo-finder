@@ -1,0 +1,78 @@
+EPISODE NUMBER: Episode 1
+EPISODE LOGLINE: Mara discovers her husband's business partner has forged her signature to steal the family bakery, and her husband takes his side.
+CONTINUITY NOTES: Synthetic test show.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. BAKERY - DAY
+Scene start: 00:00.00
+Scene end: 01:04.20
+
+Actions and dialogue:
+
+**ACTION:**
+Start: (00:00.00) | End: (00:03.00)
+Mara pushes open the bakery door, flour on her apron, holding a stack of envelopes.
+
+**MARA (Cheerful):**
+Start: (00:03.30) | End: (00:07.02)
+"Daniel, the bank sent letters again."
+
+**DANIEL (Nervous):**
+Start: (00:07.32) | End: (00:11.88)
+"Put them down, Mara. We need to talk."
+
+**ACTION:**
+Start: (00:12.18) | End: (00:15.18)
+Victor steps out from the back office, holding a signed contract.
+
+**VICTOR (Smug, Cold):**
+Start: (00:15.48) | End: (00:20.46)
+"You signed the bakery over to me last week."
+
+**MARA (Shocked):**
+Start: (00:20.76) | End: (00:23.64)
+"I never signed anything!"
+
+**VICTOR (Mocking):**
+Start: (00:23.94) | End: (00:26.82)
+"Your signature says otherwise."
+
+**MARA (Desperate):**
+Start: (00:27.12) | End: (00:31.26)
+"Daniel, tell him this is a lie."
+
+**CAMERA:**
+Start: (00:31.56) | End: (00:34.56)
+Close-up on Daniel looking away.
+
+**DANIEL (Cold, Callous):**
+Start: (00:34.86) | End: (00:38.58)
+"Victor is right. It's his now."
+
+**MARA (Betrayed, Trembling):**
+Start: (00:38.88) | End: (00:43.02)
+"You let him steal my mother's bakery?"
+
+**DANIEL (Harsh):**
+Start: (00:43.32) | End: (00:47.46)
+"Pack your things. You have until morning."
+
+**SOUND FX:**
+Start: (00:47.76) | End: (00:50.76)
+A tray of bread crashes to the floor.
+
+**ACTION:**
+Start: (00:51.06) | End: (00:54.06)
+Mara's hands shake as she grips the counter, fury replacing tears.
+
+**MARA (Steely, Defiant):**
+Start: (00:54.36) | End: (01:00.60)
+"Then you'd better hope I never find out how you did it."
+
+**SOUND FX:**
+Start: (01:00.90) | End: (01:03.90)
+Ominous string sting into a cliffhanger cut to black.
+
+--- SCRIPT END ---

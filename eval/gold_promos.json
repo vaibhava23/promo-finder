@@ -1,0 +1,341 @@
+[
+ {
+  "id": "G01",
+  "title": "Jilted at the altar, a stranger proposes",
+  "segments": [
+   [
+    1,
+    35.4,
+    43.1
+   ],
+   [
+    3,
+    58.2,
+    85.6
+   ],
+   [
+    3,
+    133.2,
+    143.0
+   ]
+  ]
+ },
+ {
+  "id": "G02",
+  "title": "Altar betrayal (single cut)",
+  "segments": [
+   [
+    1,
+    33.7,
+    79.0
+   ]
+  ]
+ },
+ {
+  "id": "G03",
+  "title": "Guards drag the bride; stranger intervenes",
+  "segments": [
+   [
+    3,
+    58.2,
+    85.6
+   ],
+   [
+    3,
+    110.9,
+    143.0
+   ]
+  ]
+ },
+ {
+  "id": "G04",
+  "title": "Gerald threatens; scarred husband appears; 'Impossible.'",
+  "segments": [
+   [
+    7,
+    65.6,
+    91.5
+   ],
+   [
+    9,
+    92.1,
+    112.0
+   ]
+  ]
+ },
+ {
+  "id": "G05",
+  "title": "Planted pocket watch",
+  "segments": [
+   [
+    11,
+    16.8,
+    25.2
+   ],
+   [
+    11,
+    81.3,
+    106.6
+   ]
+  ]
+ },
+ {
+  "id": "G06",
+  "title": "'I want to see you crawl, sister'",
+  "segments": [
+   [
+    12,
+    44.0,
+    84.7
+   ]
+  ]
+ },
+ {
+  "id": "G07",
+  "title": "Bare hands into the briars",
+  "segments": [
+   [
+    13,
+    45.8,
+    88.8
+   ]
+  ]
+ },
+ {
+  "id": "G08",
+  "title": "Thugs destroy her garden",
+  "segments": [
+   [
+    15,
+    44.8,
+    84.0
+   ]
+  ]
+ },
+ {
+  "id": "G09",
+  "title": "Fire: going back for the ledger",
+  "segments": [
+   [
+    18,
+    56.2,
+    89.0
+   ]
+  ]
+ },
+ {
+  "id": "G10",
+  "title": "'Your Grace.' The beggar is a Duke",
+  "segments": [
+   [
+    19,
+    43.0,
+    89.0
+   ]
+  ]
+ },
+ {
+  "id": "G11",
+  "title": "'Someone is poisoning her' / someone is coming",
+  "segments": [
+   [
+    23,
+    70.5,
+    88.0
+   ],
+   [
+    23,
+    112.2,
+    131.5
+   ]
+  ]
+ },
+ {
+  "id": "G12",
+  "title": "Riding crop: 'Then let her suffer'",
+  "segments": [
+   [
+    24,
+    27.0,
+    48.0
+   ],
+   [
+    24,
+    78.6,
+    89.8
+   ]
+  ]
+ },
+ {
+  "id": "G13",
+  "title": "The ring with the ducal crest",
+  "segments": [
+   [
+    26,
+    96.0,
+    116.0
+   ],
+   [
+    27,
+    17.2,
+    52.2
+   ]
+  ]
+ },
+ {
+  "id": "G14",
+  "title": "Locket torn off; identity exposed",
+  "segments": [
+   [
+    28,
+    70.8,
+    116.0
+   ]
+  ]
+ },
+ {
+  "id": "G15",
+  "title": "Dungeon: 'What do you have?' / branding iron",
+  "segments": [
+   [
+    31,
+    98.5,
+    153.0
+   ]
+  ]
+ },
+ {
+  "id": "G16",
+  "title": "Witch trial: 'Then let it be.'",
+  "segments": [
+   [
+    34,
+    142.4,
+    190.0
+   ]
+  ]
+ },
+ {
+  "id": "G17",
+  "title": "Mother returns from the dead",
+  "segments": [
+   [
+    35,
+    37.0,
+    59.0
+   ],
+   [
+    35,
+    134.0,
+    151.0
+   ]
+  ]
+ },
+ {
+  "id": "G18",
+  "title": "'Their dead Duke is coming home'",
+  "segments": [
+   [
+    36,
+    132.2,
+    163.2
+   ],
+   [
+    36,
+    182.0,
+    197.0
+   ]
+  ]
+ },
+ {
+  "id": "G19",
+  "title": "Execution bells / the Duke cuts his hair",
+  "segments": [
+   [
+    38,
+    64.5,
+    82.0
+   ],
+   [
+    39,
+    56.5,
+    68.5
+   ],
+   [
+    39,
+    85.5,
+    98.0
+   ]
+  ]
+ },
+ {
+  "id": "G20",
+  "title": "Cathedral explodes; the Duke walks in",
+  "segments": [
+   [
+    41,
+    81.0,
+    89.0
+   ],
+   [
+    42,
+    1.0,
+    34.0
+   ]
+  ]
+ },
+ {
+  "id": "G21",
+  "title": "Ex-lover begs; 'Her?!'",
+  "segments": [
+   [
+    44,
+    25.2,
+    71.0
+   ]
+  ]
+ },
+ {
+  "id": "G22",
+  "title": "'You're the Duke?' then marriage declared invalid",
+  "segments": [
+   [
+    45,
+    12.5,
+    29.6
+   ],
+   [
+    45,
+    74.8,
+    81.5
+   ],
+   [
+    45,
+    86.5,
+    113.0
+   ]
+  ]
+ },
+ {
+  "id": "G23",
+  "title": "Villain made scullery maid",
+  "segments": [
+   [
+    47,
+    56.8,
+    101.5
+   ]
+  ]
+ },
+ {
+  "id": "G24",
+  "title": "Romance: 'Your touch is the only medicine'",
+  "segments": [
+   [
+    10,
+    63.9,
+    94.0
+   ]
+  ]
+ }
+]

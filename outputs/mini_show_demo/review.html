@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Promo Review</title><style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mut:#6b6a66;--line:#e4e1da;--acc:#9a3b2e;--ok:#2f6b3a;--chip:#f1ece3}
+@media (prefers-color-scheme:dark){:root{--bg:#171614;--fg:#ecebe7;--mut:#a3a19b;--line:#33312d;--acc:#e08a7a;--ok:#8fcf98;--chip:#26241f}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 system-ui,sans-serif} main{max-width:1200px;margin:auto;padding:24px 16px}
+h1{font-size:22px;margin:0 0 4px} p.m{color:var(--mut);margin:0 0 16px} .wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:900px} th,td{border-bottom:1px solid var(--line);padding:10px 8px;vertical-align:top;text-align:left}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut)} .n{white-space:nowrap} .mono{font-family:ui-monospace,monospace;font-size:13px;white-space:nowrap}
+.flag{display:inline-block;background:var(--chip);color:var(--acc);border-radius:4px;padding:1px 6px;margin:4px 4px 0 0;font-size:12px}
+.fun{color:var(--mut);font-size:12px;margin-top:4px} button{background:none;border:1px solid var(--line);color:var(--fg);border-radius:4px;padding:4px 10px;cursor:pointer;margin:0 2px}
+tr.yes{background:color-mix(in srgb,var(--ok) 12%,transparent)} tr.no{opacity:.45} #dl{margin:12px 0}
+</style></head><body><main><h1>Promo review</h1>
+<p class="m">mini_show · 3 episodes · 48 candidates scored · heuristic. Mark ✓/✗, then export your decisions.</p>
+<button id="dl">Export decisions (CSV)</button>
+<div class="wrap"><table><thead><tr><th>#</th><th>Segments</th><th>Len</th><th>Hook</th><th>Cliffhanger</th><th>Why / flags</th><th>Keep?</th></tr></thead>
+<tbody><tr data-id="P01"><td class="n">1</td><td class="mono">E1 00:38.88–01:03.90</td>
+<td class="n">25s</td><td>Mara: &quot;You let him steal my mother&#x27;s bakery?&quot;</td><td>Mara: &quot;Then you&#x27;d better hope I never find out how you did it.&quot; (+ music sting)</td>
+<td>Loaded question in the first 1s (&quot;You let him steal my mother&#x27;s bakery?&quot;); ends on episode-ending sting; stays on the leads, so no backstory is needed.<div></div><div class="fun">acquisition (early/free episodes, no big spoilers)</div></td>
+<td class="act"><button data-v="yes">✓</button><button data-v="no">✗</button></td></tr><tr data-id="P02"><td class="n">2</td><td class="mono">E1 00:15.48–00:43.02</td>
+<td class="n">28s</td><td>Victor: &quot;You signed the bakery over to me last week.&quot;</td><td>Mara: &quot;You let him steal my mother&#x27;s bakery?&quot;</td>
+<td>Shocking line in the first 1s (&quot;You signed the bakery over to me...&quot;); ends on unanswered question; stays on the leads, so no backstory is needed.<div></div><div class="fun">acquisition (early/free episodes, no big spoilers)</div></td>
+<td class="act"><button data-v="yes">✓</button><button data-v="no">✗</button></td></tr><tr data-id="P03"><td class="n">3</td><td class="mono">E3 00:11.22–00:35.94</td>
+<td class="n">25s</td><td>[action] Victor grabs Mara&#x27;s wrist and slams the photograph onto the table.</td><td>Mara: &quot;What will?&quot;</td>
+<td>Physical moment in the first 1s ([Victor grabs Mara&#x27;s wrist and slams the...]); ends on unanswered question; stays on the leads, so no backstory is needed.<div></div><div class="fun">retargeting (late-arc payoff, spoils twists)</div></td>
+<td class="act"><button data-v="yes">✓</button><button data-v="no">✗</button></td></tr><tr data-id="P04"><td class="n">4</td><td class="mono">E2 00:15.36–00:40.50</td>
+<td class="n">25s</td><td>Mara: &quot;My mother is dead.&quot;</td><td>Mara: &quot;What are you saying?&quot;</td>
+<td>Reveal / accusation in the first 1s (&quot;My mother is dead.&quot;); ends on unanswered question.<div></div><div class="fun">mid-funnel</div></td>
+<td class="act"><button data-v="yes">✓</button><button data-v="no">✗</button></td></tr></tbody></table></div></main><script>
+const k='promo-review:'+location.pathname; let s={}; try{s=JSON.parse(localStorage.getItem(k)||'{}')}catch(e){}
+document.querySelectorAll('tr[data-id]').forEach(r=>{const id=r.dataset.id; if(s[id]) r.className=s[id];
+ r.querySelectorAll('button').forEach(b=>b.onclick=()=>{s[id]=b.dataset.v; r.className=b.dataset.v; try{localStorage.setItem(k,JSON.stringify(s))}catch(e){}})});
+document.getElementById('dl').onclick=()=>{const csv='id,decision\n'+Object.entries(s).map(([a,b])=>a+','+b).join('\n');
+ const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'})); a.download='decisions.csv'; a.click()};
+</script></body></html>

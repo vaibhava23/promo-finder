@@ -1,0 +1,58 @@
+EPISODE NUMBER: Episode 3
+EPISODE LOGLINE: Mara confronts Victor with the photograph, only to discover Daniel has been hiding a far darker secret.
+CONTINUITY NOTES: Synthetic test show.
+
+--- SCRIPT START ---
+
+SCENE 01
+Scene heading: INT. BAKERY - DAY
+Scene start: 00:00.00
+Scene end: 00:39.54
+
+Actions and dialogue:
+
+**MARA (Fierce):**
+Start: (00:00.00) | End: (00:02.88)
+"You knew my mother."
+
+**VICTOR (Uneasy):**
+Start: (00:03.18) | End: (00:06.48)
+"Everyone in town knew her."
+
+**MARA (Accusing):**
+Start: (00:06.78) | End: (00:10.92)
+"You were there the night she died!"
+
+**ACTION:**
+Start: (00:11.22) | End: (00:14.22)
+Victor grabs Mara's wrist and slams the photograph onto the table.
+
+**VICTOR (Threatening):**
+Start: (00:14.52) | End: (00:19.50)
+"Drop this, or you'll end up just like her."
+
+**MARA (Defiant):**
+Start: (00:19.80) | End: (00:22.68)
+"Is that a threat?"
+
+**VICTOR (Menacing):**
+Start: (00:22.98) | End: (00:25.44)
+"It's a promise."
+
+**SOUND FX:**
+Start: (00:25.74) | End: (00:28.74)
+The door bursts open.
+
+**DANIEL (Panicked):**
+Start: (00:29.04) | End: (00:33.60)
+"Victor, stop! She can't know about the will!"
+
+**MARA (Stunned):**
+Start: (00:33.90) | End: (00:35.94)
+"What will?"
+
+**SOUND FX:**
+Start: (00:36.24) | End: (00:39.24)
+Sharp string sting and abrupt cut to black.
+
+--- SCRIPT END ---
