@@ -70,3 +70,15 @@ in place (`promo/pipeline.py: llm_tag, llm_judge`) and would be the first thing 
 - Offline mode: free, ~3 s per 50-episode show.
 - LLM mode, measured by dry run with real prompts: **110 calls (50 tagging + 60 judging), ~113k input + ~35k output tokens per show**, roughly $0.03 on a Flash-class model and free within Gemini's free tier (~8 min at free-tier rate limits). Responses are cached, so re-runs cost nothing.
 - 10 new shows a week means about 1,100 calls a week. The bottleneck is the editor's review (~5–10 min per show using `review.html`), not compute.
+
+## 7. Robustness: what if a new show's scripts lack loglines or emotion tags? (`eval/robustness.py`)
+| Input | R@10 | R@30 | P@10 | test R@30 | rules hold |
+|---|---|---|---|---|---|
+| Full input | 0.21 | 0.38 | **0.50** | 0.27 | ✓ |
+| No loglines | 0.12 | 0.42 | 0.30 | 0.36 | ✓ |
+| No emotion tags | 0.17 | 0.33 | 0.40 | 0.27 | ✓ |
+| Neither | 0.12 | 0.38 | 0.20 | 0.36 | ✓ |
+
+Hard rules always hold and broad recall barely moves. The loglines and emotion tags mainly sharpen the **top of
+the list** (precision@10 halves without them). For a show without loglines, the LLM tagging step is the
+substitute.

@@ -11,3 +11,4 @@ __pycache__/
 # Raw outputs on the real show quote Kuku's scripts: share them via a Drive link, not a public repo
 outputs/*
 !outputs/mini_show_demo/
+deliverables/
