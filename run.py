@@ -16,6 +16,7 @@ import yaml
 
 from promo.llm import LLM
 from promo.pipeline import run
+from promo import explorer
 
 
 def main():
@@ -79,6 +80,7 @@ def write_outputs(out: Path, res: dict, input_dir: str):
             md += [f"- **{p['id']}** · {p['duration_s']:.1f}s · {segs} · Hook: {p['hook']} · Cliffhanger: {p['cliffhanger']}"]
     (out / "promos.md").write_text("\n".join(md))
     (out / "review.html").write_text(review_html(promos, stats, input_dir))
+    (out / "explorer.html").write_text(explorer.build(res["show"], res, Path(input_dir).name))
 
 
 def posting_plan(promos, n=5):

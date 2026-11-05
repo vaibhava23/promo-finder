@@ -12,7 +12,8 @@ the funnel stage, safety flags and alternate cuts. Cut points always land betwee
 pip install -r requirements.txt
 python run.py --input "path/to/show_folder" --out outputs/my_show
 ```
-Open `outputs/my_show/review.html` in a browser to review, mark ✓/✗ and export decisions. Other outputs:
+Open **`outputs/my_show/explorer.html`** in a browser: click any promo to see its script lines, hook zone, cliffhanger,
+what's withheld after the cut, and scores. `review.html` is the editor's ✓/✗ sheet with CSV export. Other outputs:
 `promos.json` (full detail), `promos.csv` (spreadsheet), `promos.md` (readable list).
 
 Try it without the confidential pack on the included synthetic show:
