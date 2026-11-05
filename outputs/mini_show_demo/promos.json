@@ -39,6 +39,9 @@
         "body": 0.299,
         "standalone": 1.0
       },
+      "hook_type": "loaded question",
+      "cliff_type": "episode-ending sting",
+      "unknown_names": [],
       "alternate_cuts": []
     },
     {
@@ -68,6 +71,9 @@
         "body": 0.447,
         "standalone": 1.0
       },
+      "hook_type": "shocking line",
+      "cliff_type": "unanswered question",
+      "unknown_names": [],
       "alternate_cuts": []
     },
     {
@@ -97,6 +103,9 @@
         "body": 0.386,
         "standalone": 1.0
       },
+      "hook_type": "physical moment",
+      "cliff_type": "unanswered question",
+      "unknown_names": [],
       "alternate_cuts": []
     },
     {
@@ -126,6 +135,9 @@
         "body": 0.219,
         "standalone": 1.0
       },
+      "hook_type": "reveal / accusation",
+      "cliff_type": "unanswered question",
+      "unknown_names": [],
       "alternate_cuts": []
     }
   ],
@@ -166,6 +178,9 @@
         "body": 0.427,
         "standalone": 1.0
       },
+      "hook_type": "shocking line",
+      "cliff_type": "unanswered question",
+      "unknown_names": [],
       "alternate_cuts": []
     }
   ]

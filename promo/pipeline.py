@@ -490,6 +490,9 @@ def package(show: Show, c: dict, rank: int, prefix: str) -> dict:
         "hook": d["hook"], "cliffhanger": d["cliffhanger"], "why": d["why"],
         "funnel": d["funnel"], "flags": d["flags"],
         "components": {k: c[k] for k in ("hook", "cliff", "body", "standalone")},
+        "hook_type": c["hook_beat"]["hook_type"] if c.get("hook_beat") else "",
+        "cliff_type": c["cliff_beat"]["cliff_type"] if c.get("cliff_beat") else "",
+        "unknown_names": c.get("unknown_names", []),
         # same hook, different ending/length: ready-made A/B variants for the editor
         "alternate_cuts": [{"duration_s": a["length"], "quality": a["score"], "segments": seg_out(a["segments"]),
                             "cliffhanger": describe(show, a)["cliffhanger"]} for a in c.get("alternates", [])],
