@@ -58,7 +58,7 @@ Sources are mostly practitioner/vendor material; hard ad-performance data is pri
 | Speaker parentheticals vary | `THE FORMER GROOM (Off-screen) (Dismissive)`, `LORD ASHCROFT (O.S. / Continues)`, `BLOND NOBLEMAN (Rupert) (Cold)` | Parse all groups; extract off-screen flag + alias hints ✅ |
 | **Same character, many names** | Clarissa = LADY IN GOLD GOWN; Gerald = THE FORMER GROOM; Alexander = THE BEARDED STRANGER / MYSTERIOUS BEARDED MAN / SCARRED BEARDED MAN; stepmother = MATRIARCH / NOBLE MATRIARCH / LADY ASHCROFT / OFF-SCREEN VOICE; Rupert = BLOND NOBLEMAN; Dowager = ALEXANDER'S MOTHER / LADY ASHBOURNE; High Priest ≈ Father Thomas | Character bible built by LLM once per show |
 | **Alias collision** | In E02 "BLOND NOBLEMAN" is Juliana's *father*; from E09 on it's *Rupert* | Aliases must be per-episode, not global |
-| **Continuity errors (AI-generated scripts)** | The Duke's estate is called **11 different names**: Ashbury, Ashburg, Ashbourne, Ashburton, Ashburn, Ashburgh, Ashbridge, Ashwood, Ashworth, Ashbrook (+ Ashcroft for her family). Alexander's surname: Ashwin/Ashburn/Ashburton. E46 says the marriage was "three years" ago (it was days). "Clarisse" once. | Flag multi-segment promos that splice two spellings in one clip (viewer confusion) |
+| **Continuity errors in the scripts** | The Duke's estate is called **11 different names**: Ashbury, Ashburg, Ashbourne, Ashburton, Ashburn, Ashburgh, Ashbridge, Ashwood, Ashworth, Ashbrook (+ Ashcroft for her family). Alexander's surname: Ashwin/Ashburn/Ashburton. E46 says the marriage was "three years" ago (it was days). "Clarisse" once. | Flag multi-segment promos that splice two spellings in one clip (viewer confusion) |
 | Overlapping/parallel timing | Camera, action and dialogue run in parallel; 8 out-of-order starts; 10 overlapping dialogue pairs | Cut points must snap to *dialogue* boundaries |
 | **Hand-picked cuts still clip lines** | 9 of my own 24 hand-labelled cuts initially ended mid-line ("There it is. Ha!") | Boundary snapping must be **code**, never left to the LLM |
 | Keywords don't find hooks | "slap/explosion/strike" appear ~15 times in all 50 eps; most hooks are spoken reveals | Semantic scoring (LLM) needed; keywords only as a weak feature |
@@ -194,4 +194,4 @@ screenplays/*.txt
 2. Run on all 50 episodes → `outputs/` (raw, unedited).
 3. Evaluate vs gold set; write failures honestly.
 4. 2-page PDF doc + optional 3-min video.
-5. Keep a log of "where AI got it wrong" — already have one: **AI-written scripts in the pack contain 11 spellings of the same estate**, and my first hand-made cut list clipped lines 9 times.
+5. Keep a log of "where the tools got it wrong" — already have one: **the scripts in the pack contain 11 spellings of the same estate**, and my first hand-made cut list clipped lines 9 times.

@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from promo.llm import LLM
 from promo.pipeline import run
 
-FD = Path("/root/.claude/skills/synced/5ce3db8f-74be-4868-97bd-a30ae51ab533_c20cb484-1caf-4abc-8935-2f4da4d87487/canvas-design/canvas-fonts")
+FD = Path(__file__).parent / "fonts"
 def F(name, size): return ImageFont.truetype(str(FD / name), size)
 
 res = run(sys.argv[1], LLM({"provider": "heuristic"}), top_k=30, log=lambda m: None)

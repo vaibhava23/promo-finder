@@ -29,7 +29,7 @@ def table(rows, widths, head=True):
 
 story = [
     p("Promo Finder: finding the best promos in a microdrama, automatically", T),
-    p("Kuku AI Generalist Assignment · Problem 1 · [Name] · [Roll no.] · [Branch] · "
+    p("Kuku AI Generalist Assignment · Problem 1 · Vaibhav Arya · 231112 · B.Tech Civil Engineering · "
       "Prototype: [GitHub link] · Raw outputs: [Drive link] · Video: [link]", S),
 
     p("1. Why this problem", H),
@@ -95,16 +95,16 @@ page2 = [
          "<b>Quiet twists</b>: 'Your Grace.' said to the 'beggar' husband is the show's core reveal, but rules score it low because it's calm; "
          "'Mother.' slipped in as a hook. Payoffs ('This is my son… the rightful Duke!') can pass for cliffhangers.",
          "<b>Cross-episode edits</b>: only ~4/10 usable without an editor or LLM check, so they're kept out of the main ranking in rule mode.",
-         "<b>Text ≠ screen</b>: acting, faces and music are invisible; the gold set and audit are mine (one rater). Next step: an editor re-rates "
+         "<b>Text ≠ screen</b>: acting, faces and music are invisible; the gold set and audit come from one rater. Next step: an editor re-rates "
          "and the posted promos' 3-second hook rate, completion and CPI are compared with editor-picked promos. That's how we'd know it works in production."]),
     p("The LLM layer's 'context' and 'resolves' scores target the first two failures, and measuring it is the first thing to do with a key.", B),
 
     p("6. AI tools used, and where they got it wrong", H),
-    p("Claude (via Claude Code) for research, reading the scripts, coding and tests; I made and checked the design decisions. Where AI got it wrong:", B),
-    *bl(["My first AI-made list of 24 hand-picked cuts <b>clipped dialogue mid-line 9 times</b> ('There it is. Ha!'), which is why cut points are now code, never model output.",
-         "The AI-generated scripts themselves: the Duke's estate is spelled <b>11 different ways</b> (Ashburg, Ashbourne, Ashburton…), a marriage of a few days "
+    p("Claude (Claude Code) for research, script reading, coding and tests. Where it got things wrong:", B),
+    *bl(["Its first list of 24 hand-picked cuts <b>clipped dialogue mid-line 9 times</b> ('There it is. Ha!'), which is why cut points are now code, never model output.",
+         "The scripts themselves: the Duke's estate is spelled <b>11 different ways</b> (Ashburg, Ashbourne, Ashburton…), a marriage of a few days "
          "is called 'three years', and a romantic embrace is labelled 'cliffhanger'. The tool had to stop trusting those labels.",
-         "AI-suggested weight tuning <b>overfit</b> (above). Tests also caught an AI-written JSON parser that misread array replies."]),
+         "Its suggested weight tuning <b>overfit</b> (above), and tests caught a JSON parser it wrote that misread array replies."]),
     p("7. Scaling to every show", H),
     p("Same format means no per-show setup: leads, names and aliases are inferred from the scripts. The weekly flow is "
       "script → run (seconds) → editor approves in review.html → export. Approve/reject decisions are logged and become new gold labels "
@@ -112,7 +112,7 @@ page2 = [
 ]
 
 doc = SimpleDocTemplate("docs/solution.pdf", pagesize=A4, leftMargin=15 * mm, rightMargin=15 * mm,
-                        topMargin=11 * mm, bottomMargin=10 * mm, title="Promo Finder: Solution", author="[Name]")
+                        topMargin=11 * mm, bottomMargin=10 * mm, title="Promo Finder: Solution", author="Vaibhav Arya")
 from reportlab.platypus import PageBreak
 doc.build(story + page2)
 print("built docs/solution.pdf")

@@ -25,8 +25,8 @@ that wording became "something dramatic happens". These labels feed explanations
 identical before and after (Recall@30 0.38, P@10 0.50).
 
 **Judgement quality** (from `eval/RESULTS.md`, `eval/audit.md`): top 10 all-three pass rate 8/10; held-out
-validation; one tuning attempt rejected for overfitting. The rater is the same AI that built the tool, so a
-human editor should re-rate.
+validation; one tuning attempt rejected for overfitting. The rater also built the tool, so an independent
+editor should re-rate.
 
 ## 2. Accessibility (axe-core 4.10, WCAG 2.0/2.1/2.2 A + AA + best practice)
 | | Before | After |

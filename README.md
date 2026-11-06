@@ -1,11 +1,11 @@
 # Promo Finder: find the best 20–60 s promos in a microdrama screenplay
 
-Kuku AI Generalist assignment, **Problem 1: Find the Promos**.
+Kuku AI Generalist assignment, **Problem 1: Find the Promos**. Vaibhav Arya · 231112 · B.Tech Civil Engineering.
 
 It reads a folder of timestamped screenplays (one `.txt` per episode) and returns ranked promo cuts. Each one
 gives the episode and the start and end of every segment, the hook, the cliffhanger, one line on why it works,
 the funnel stage, safety flags and alternate cuts. Cut points always land between lines and every promo is
-20–60 s. That part is code, not AI, so it is always exactly right.
+20–60 s. That part is plain code, not a model, so it is always exactly right.
 
 ## Run it (2 minutes)
 ```bash
@@ -44,7 +44,7 @@ screenplays ─► 1 PARSE (code) ─► 2 SCORE BEATS (rules, + LLM if on) ─�
                                    the payoff", resolution penalties
 ```
 - **Code**: parsing, timing, snapping cuts to line boundaries, 20–60 s, dedupe, overlap, outputs.
-- **AI (optional)**: meaning. Is this line a reveal? Would a stranger follow it? Writing the "why".
+- **Model (optional)**: meaning. Is this line a reveal? Would a stranger follow it? Writing the "why".
 - **Human**: an editor approves the shortlist in `review.html` (minutes, not watching 100 minutes of footage).
 
 ## Quality

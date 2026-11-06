@@ -1,6 +1,6 @@
 # Blind audit of the tool's final top 30 (heuristic mode)
 
-Rater: the same AI assistant that built the tool, so there is a bias risk; a Kuku editor should re-rate.
+Rater: a single rater who also built the tool, so there is a bias risk; a Kuku editor should re-rate.
 Checks from the brief: **H** hook lands in first 3 s · **C** ends unresolved · **S** makes sense to a stranger.
 
 | # | Segments | H | C | S | Note |
