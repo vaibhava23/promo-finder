@@ -218,7 +218,8 @@ def hook_type(b: dict) -> str:
     t = b["text"] or ""
     if b["kind"] in ("ACTION", "SOUND FX") and (PHYSICAL.search(t) or SFX_STRONG.search(t)):
         return "physical moment"
-    if re.search(r"\b(marry|dead|alive|poison|duke|grace|witch|arrest|stole|son|ring)\b", t, re.I):
+    if re.search(r"\b(marr(?:y|ying|ied|iage)|dead|died|alive|poison\w*|arsenic|duke|grace|witch\w*|arrest\w*|"
+                 r"stole|steal\w*|sold|betray\w*|lie|liar|son|ring|imposter|traitor|condemn\w*)\b", t, re.I):
         return "reveal / accusation"
     if re.search(r"\b(hang|kill|crawl|burn|disappear|gallows|execut)", t, re.I):
         return "threat"
@@ -229,7 +230,8 @@ def hook_type(b: dict) -> str:
 
 def cliff_type(b: dict, dur: float) -> str:
     t = b["text"] or ""
-    if INTERRUPT.search(t) and b["kind"] != "DIALOGUE":
+    if (INTERRUPT.search(t) and b["kind"] != "DIALOGUE") or re.search(r"\b(someone is coming|who goes there|"
+                                                                          r"they're here|open the door)\b", t, re.I):
         return "interruption"
     if t.strip().endswith("?"):
         return "unanswered question"

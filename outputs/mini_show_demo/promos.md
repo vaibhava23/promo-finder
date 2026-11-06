@@ -24,7 +24,7 @@ Provider: `heuristic` · episodes: 3 · candidates scored: 48 · runtime: 0.0s
 - Segments: **E1** 00:38.88–01:03.90
 - Hook: Mara: "You let him steal my mother's bakery?"
 - Cliffhanger: Mara: "Then you'd better hope I never find out how you did it." (+ music sting)
-- Why: Loaded question in the first 1s ("You let him steal my mother's bakery?"); ends on episode-ending sting; stays on the leads, so no backstory is needed.
+- Why: Reveal / accusation in the first 1s ("You let him steal my mother's bakery?"); ends on episode-ending sting; stays on the leads, so no backstory is needed.
 - Funnel: acquisition (early/free episodes, no big spoilers)
 
 ## 2. P02 · 27.5s · score 0.859

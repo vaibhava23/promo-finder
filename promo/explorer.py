@@ -56,10 +56,10 @@ TEMPLATE = r"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <style>
 /* Layout: guided page. Intro, how a promo works, "start here" picks, then a list beside a phone-shaped player. */
 :root{
-  --bg:#f3f4f8; --panel:#ffffff; --ink:#171a26; --mut:#596075; --line:#dde0ea;
-  --accent:#3445cf; --accent-soft:#e6e9fb;
-  --hook:#f5b70a; --hook-soft:#fff2c4; --cliff:#d93a59; --cliff-soft:#fde0e6;
-  --held:#eceef3; --good:#1d8657; --warn:#a85308; --warn-soft:#fdebd8;
+  --bg:#f3f4f8; --panel:#ffffff; --ink:#171a26; --mut:#4f566b; --line:#dde0ea;
+  --accent:#2f3fc0; --accent-soft:#e6e9fb;
+  --hook:#f5b70a; --hook-soft:#fff2c4; --cliff:#cc2f4f; --cliff-soft:#fde0e6; --cliff-ink:#a3203b;
+  --held:#eceef3; --good:#11613c; --warn:#8f4506; --warn-soft:#fdebd8; --on-accent:#ffffff; --on-cliff:#ffffff;
   --screen:#0f111a; --screen-ink:#f5f6fb;
   --f-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --f-body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -67,12 +67,12 @@ TEMPLATE = r"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#11131b; --panel:#191c27; --ink:#eceef6; --mut:#a3a9bc; --line:#2b2f3f;
-  --accent:#8e9cff; --accent-soft:#252b4d; --hook:#f5c542; --hook-soft:#3a3016; --cliff:#ff7a92; --cliff-soft:#43202a;
-  --held:#232634; --good:#62d39b; --warn:#f0a35b; --warn-soft:#3b2814; --screen:#07080d; --screen-ink:#f5f6fb; color-scheme:dark}}
+  --accent:#8e9cff; --accent-soft:#252b4d; --hook:#f5c542; --hook-soft:#3a3016; --cliff:#ff7a92; --cliff-soft:#43202a; --cliff-ink:#ff9cae;
+  --held:#232634; --good:#62d39b; --warn:#f0a35b; --warn-soft:#3b2814; --screen:#07080d; --screen-ink:#f5f6fb; --on-accent:#0d1030; --on-cliff:#2a0710; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#11131b; --panel:#191c27; --ink:#eceef6; --mut:#a3a9bc; --line:#2b2f3f;
-  --accent:#8e9cff; --accent-soft:#252b4d; --hook:#f5c542; --hook-soft:#3a3016; --cliff:#ff7a92; --cliff-soft:#43202a;
-  --held:#232634; --good:#62d39b; --warn:#f0a35b; --warn-soft:#3b2814; --screen:#07080d; --screen-ink:#f5f6fb; color-scheme:dark}
+  --accent:#8e9cff; --accent-soft:#252b4d; --hook:#f5c542; --hook-soft:#3a3016; --cliff:#ff7a92; --cliff-soft:#43202a; --cliff-ink:#ff9cae;
+  --held:#232634; --good:#62d39b; --warn:#f0a35b; --warn-soft:#3b2814; --screen:#07080d; --screen-ink:#f5f6fb; --on-accent:#0d1030; --on-cliff:#2a0710; color-scheme:dark}
 *{box-sizing:border-box}
 html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-body);
@@ -85,6 +85,9 @@ h3{font-size:13px;font-family:var(--f-body);font-weight:700;letter-spacing:.06em
 p{margin:0}.mut{color:var(--mut)}
 button{font:inherit;color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:8px;z-index:20}
+.skip:focus{left:max(16px,env(safe-area-inset-left,0px))}
+#dtitle:focus{outline:none}
 
 /* intro */
 .intro{display:grid;gap:12px;max-width:760px}
@@ -125,9 +128,9 @@ button{font:inherit;color:inherit}
 .item .row{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;color:var(--mut);font-variant-numeric:tabular-nums}
 .item .h{font-size:14.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .pill{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:1px 9px;white-space:nowrap}
-.p1{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good)}
+.p1{background:color-mix(in srgb,var(--good) 13%,var(--panel));color:var(--good)}
 .p2{background:var(--accent-soft);color:var(--accent)}
-.p3{background:var(--cliff-soft);color:var(--cliff)}
+.p3{background:var(--cliff-soft);color:var(--cliff-ink)}
 .pV{background:var(--held);color:var(--mut)}
 
 .detail{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;gap:20px;min-width:0}
@@ -142,7 +145,7 @@ button{font:inherit;color:inherit}
   display:grid;grid-template-rows:auto 1fr auto auto;gap:10px;position:relative;box-shadow:0 0 0 6px var(--line)}
 .ph-top{display:flex;justify-content:space-between;font-size:12px;opacity:.75;font-variant-numeric:tabular-nums}
 .ph-zone{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:999px;align-self:start}
-.z-hook{background:var(--hook);color:#1b1500}.z-cliff{background:var(--cliff);color:#fff}.z-mid{background:rgba(255,255,255,.14)}
+.z-hook{background:var(--hook);color:#1b1500}.z-cliff{background:var(--cliff);color:var(--on-cliff)}.z-mid{background:rgba(255,255,255,.14)}
 .ph-screen{display:grid;align-content:center;gap:10px;text-align:center;padding:6px}
 .ph-act{font-style:italic;opacity:.78;font-size:14px;line-height:1.4}
 .ph-who{font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
@@ -155,7 +158,7 @@ button{font:inherit;color:inherit}
 .ctrl{display:flex;gap:8px;justify-content:center}
 .btn{border:0;border-radius:999px;padding:8px 16px;font-weight:700;cursor:pointer;background:var(--screen-ink);color:var(--screen)}
 .btn.ghost{background:rgba(255,255,255,.14);color:var(--screen-ink)}
-.btn.main{background:var(--accent);color:#fff}
+.btn.main{background:var(--accent);color:var(--on-accent)}
 
 /* script */
 .script{border:1px solid var(--line);border-radius:12px;overflow:hidden}
@@ -167,9 +170,9 @@ button{font:inherit;color:inherit}
 .ln.now{outline:2px solid var(--accent);outline-offset:-2px}
 .ln .who{font-weight:700}.ln .tone{color:var(--mut);font-size:13px}.ln .act{font-style:italic;color:var(--mut)}
 .mark{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:4px;padding:0 6px;margin-left:6px;white-space:nowrap}
-.m-hook{background:var(--hook);color:#1b1500}.m-cliff{background:var(--cliff);color:#fff}
+.m-hook{background:var(--hook);color:#1b1500}.m-cliff{background:var(--cliff);color:var(--on-cliff)}
 .cut{padding:6px 12px;font-size:13px;font-weight:700;color:var(--accent);background:var(--accent-soft);border-top:1px solid var(--line)}
-.cut.end{color:var(--cliff);background:var(--cliff-soft)}
+.cut.end{color:var(--cliff-ink);background:var(--cliff-soft)}
 
 /* grades + where */
 .grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
@@ -184,6 +187,11 @@ button{font:inherit;color:inherit}
 .warns{display:grid;gap:6px}.warn{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:14.5px}
 .alts{margin:0;padding-left:20px;display:grid;gap:4px;font-size:15px}
 
+/* trust */
+.trust{display:grid;gap:10px}.trow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.trow>div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.trow b{font-family:var(--f-display);font-size:17px}.trow p{color:var(--mut);font-size:15px}
+@media (max-width:820px){.trow{grid-template-columns:minmax(0,1fr)}}
 /* glossary */
 details.gloss{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
 details.gloss summary{cursor:pointer;font-family:var(--f-display);font-weight:800;font-size:18px}
@@ -196,7 +204,7 @@ details.gloss summary{cursor:pointer;font-family:var(--f-display);font-weight:80
   .list{max-height:none;display:flex;overflow-x:auto;padding-bottom:6px}.item{min-width:230px}
   .picks{grid-template-columns:minmax(0,1fr)}.strip{grid-template-columns:1fr 1fr}.gl{grid-template-columns:minmax(0,1fr)}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body><div class="wrap">
+</style></head><body><a class="skip" href="#all">Skip to the list of clips</a><main class="wrap" id="top">
 
 <section class="intro">
   <h1>The best ad clips in <span id="showname"></span></h1>
@@ -222,14 +230,24 @@ details.gloss summary{cursor:pointer;font-family:var(--f-display);font-weight:80
   <div class="picks" id="picks"></div>
 </section>
 
-<section class="explorer" aria-label="All clips">
+<section class="explorer" aria-label="All clips" id="all">
   <div class="side">
     <h2>All picks</h2>
     <div class="tabs" id="tabs"></div>
     <p class="tabnote" id="tabnote"></p>
     <div class="list" id="list"></div>
   </div>
-  <article class="detail" id="detail" aria-live="polite"></article>
+  <article class="detail" id="detail" aria-label="Selected clip"></article>
+</section>
+
+<section class="trust" aria-labelledby="trust">
+  <h2 id="trust">How much to trust these picks</h2>
+  <p>They are suggestions for a person to approve, not final decisions.</p>
+  <div class="trow">
+    <div><b>What was checked</b><p>Every clip is 20 to 60 seconds and never cuts a line in half: checked automatically against the original scripts. In a hand check, 8 of the top 10 clips passed all three tests (grabs attention, leaves a question, makes sense alone).</p></div>
+    <div><b>Where it can be wrong</b><p>It reads scripts, not video, so acting and music are invisible to it. It can miss quiet twists that only matter because of who says them, and some clips mention characters a newcomer won't know.</p></div>
+    <div><b>What a person should do</b><p>Watch the actual footage for the top picks, check anything marked “Check before posting”, and try the other versions to see which performs better.</p></div>
+  </div>
 </section>
 
 <details class="gloss">
@@ -244,7 +262,7 @@ details.gloss summary{cursor:pointer;font-family:var(--f-display);font-weight:80
     <dt>How it decides</dt><dd>It scores every line of every episode (how shocking, how unresolved, how central to the episode), tries about 1,400 possible clips that start and stop cleanly between lines, and keeps the best varied set. A person still approves the final picks.</dd>
   </dl>
 </details>
-</div>
+</main>
 <script>
 const D=__DATA__;
 const $=s=>document.querySelector(s);
@@ -254,7 +272,7 @@ const WAVE={"1":["Post first","p1","From the early, free episodes. Safe for bran
             "2":["Post next","p2","From the middle of the story. Use these when the first clips stop performing."],
             "3":["Post later","p3","These reveal late twists, so show them to people who already started the show."],
             "V":["Experimental","pV","Joins moments from two different episodes. A person should check that they fit together."]};
-const HOOK={"physical moment":"something physical and shocking happens on screen","reveal / accusation":"a shocking reveal or accusation",
+const HOOK={"physical moment":"something dramatic happens on screen","reveal / accusation":"a shocking reveal or accusation",
   "threat":"a threat","loaded question":"a tense question","shocking line":"a sharp, shocking line"};
 const CLIFF={"unanswered question":"a question is left hanging","threat / vow with a deadline":"someone makes a threat or a promise we don't see play out",
   "interruption":"someone bursts in at the worst moment","episode-ending sting":"the episode itself ends on a cliffhanger","unresolved moment":"the tension hasn't been resolved yet"};
@@ -286,7 +304,7 @@ function list(){const ps=D.promos.filter(p=>wave==="all"?p.wave!=="V":p.wave===w
    <span class="row"><span>${p.wave==="V"?"Idea":"#"+p.rank} · Ep ${[...new Set(p.segments.map(s=>s.episode))].join(" + ")} · ${Math.round(p.duration_s)}s</span><span class="pill ${WAVE[p.wave][1]}">${WAVE[p.wave][0]}</span></span>
    <span class="h">${esc(quote(p.hook))}</span></button>`).join("");
   document.querySelectorAll(".item").forEach(b=>b.onclick=()=>select(b.dataset.id))}
-function select(id){cur=id;stop();elapsed=0;list();render()}
+function select(id,focus=true){cur=id;stop();elapsed=0;list();render();if(focus){const h=$("#dtitle");h&&h.focus({preventScroll:true})}}
 
 function render(){const p=D.promos.find(x=>x.id===cur),L=p.lines,dur=p.duration_s;
   const lastStory=L.length-1-[...L].reverse().findIndex(l=>l.kind!=="SOUND FX");
@@ -309,10 +327,10 @@ function render(){const p=D.promos.find(x=>x.id===cur),L=p.lines,dur=p.duration_
   $("#detail").innerHTML=`
   <div class="dhead"><div class="tags"><span class="pill ${WAVE[p.wave][1]}">${WAVE[p.wave][0]}</span><span class="chip">${KIND[p.kind]||""}</span>
    <span class="chip">${Math.round(dur)} seconds</span>${p.wave!=="V"?`<span class="chip">Rank ${p.rank} of ${main.length}</span>`:""}</div>
-   <h2>${show(p.hook)}</h2><p class="mut">Episode ${[...new Set(p.segments.map(s=>s.episode))].join(" and ")}: ${esc(p.logline)}</p></div>
+   <h2 tabindex="-1" id="dtitle">${show(p.hook)}</h2><p class="mut">Episode ${[...new Set(p.segments.map(s=>s.episode))].join(" and ")}: ${esc(p.logline)}</p></div>
   <p class="why">${why}</p>
   <div class="cols">
-   <div class="phone" id="phone"><div class="ph-top"><span id="ptime">0:00 / ${fmt(dur)}</span><span class="ph-zone z-hook" id="pzone">Grab attention</span></div>
+   <div class="phone" id="phone" role="region" aria-label="Clip preview, shown as subtitles"><div class="ph-top"><span id="ptime">0:00 / ${fmt(dur)}</span><span class="ph-zone z-hook" id="pzone">Grab attention</span></div>
     <div class="ph-screen" id="pscreen"></div>
     <div class="prog" aria-hidden="true"><div class="hz" style="width:${Math.min(3/dur*100,100)}%"></div><div class="fill" id="pfill"></div></div>
     <div class="ctrl"><button class="btn main" id="pplay">▶ Play clip</button><button class="btn ghost" id="preset">↺ Restart</button></div></div>

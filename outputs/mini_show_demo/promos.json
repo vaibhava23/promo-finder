@@ -30,7 +30,7 @@
       ],
       "hook": "Mara: \"You let him steal my mother's bakery?\"",
       "cliffhanger": "Mara: \"Then you'd better hope I never find out how you did it.\" (+ music sting)",
-      "why": "Loaded question in the first 1s (\"You let him steal my mother's bakery?\"); ends on episode-ending sting; stays on the leads, so no backstory is needed.",
+      "why": "Reveal / accusation in the first 1s (\"You let him steal my mother's bakery?\"); ends on episode-ending sting; stays on the leads, so no backstory is needed.",
       "funnel": "acquisition (early/free episodes, no big spoilers)",
       "flags": [],
       "components": {
@@ -39,7 +39,7 @@
         "body": 0.299,
         "standalone": 1.0
       },
-      "hook_type": "loaded question",
+      "hook_type": "reveal / accusation",
       "cliff_type": "episode-ending sting",
       "unknown_names": [],
       "alternate_cuts": []
@@ -167,7 +167,7 @@
       ],
       "hook": "Mara: \"Daniel, tell him this is a lie.\"",
       "cliffhanger": "Mara: \"Is that a threat?\"",
-      "why": "Shocking line in the first 1s (\"Daniel, tell him this is a lie.\"); ends on unanswered question, cut just before \"It's a promise.\"; stays on the leads, so no backstory is needed.",
+      "why": "Reveal / accusation in the first 1s (\"Daniel, tell him this is a lie.\"); ends on unanswered question, cut just before \"It's a promise.\"; stays on the leads, so no backstory is needed.",
       "funnel": "acquisition (early/free episodes, no big spoilers)",
       "flags": [
         "2-segment edit: check visual continuity at the join"
@@ -178,7 +178,7 @@
         "body": 0.427,
         "standalone": 1.0
       },
-      "hook_type": "shocking line",
+      "hook_type": "reveal / accusation",
       "cliff_type": "unanswered question",
       "unknown_names": [],
       "alternate_cuts": []
